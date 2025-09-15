@@ -84,40 +84,26 @@ export default function Header() {
         
         {/* Menu Panel */}
         <div 
-          className={`absolute right-0 top-0 h-full w-4/5 max-w-xs bg-black/30 backdrop-blur-lg shadow-2xl transform transition-transform duration-300 ease-in-out flex flex-col ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
+          className={`absolute right-0 top-0 h-full w-4/5 max-w-xs bg-black/20 backdrop-blur-2xl transform transition-transform duration-300 ease-in-out flex flex-col ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
           style={{
-            borderLeft: '1px solid rgba(255, 255, 255, 0.1)',
-            backdropFilter: 'blur(16px)'
+            boxShadow: '-4px 0 20px rgba(0, 0, 0, 0.5)'
           }}
         >
-          {/* Header */}
-          <div className="flex items-center justify-between p-6 border-b border-white/10">
-            <Link href="/" className="flex items-center space-x-2" onClick={() => setIsMenuOpen(false)}>
-              <img 
-                src="/placeholder-logo.png" 
-                alt="Logo" 
-                className="h-8 w-8 object-contain"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.onerror = null;
-                  target.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PHBhdGggZD0iTTE5IDE0YzAgMy43Ny0zLjU4MiA3LTggN3MtOC0zLjIzLTgtNywzLjU4Mi03LDgtNyw4LDMuMjMsOCA3WiIvPjxwYXRoIGQ9Ik0xMiAxN2E1IDUgMCAxIDAtMC0xMCIvPjwvc3ZnPg=='; // Fallback SVG
-                }}
-              />
-              <span className="text-white font-medium">Menu</span>
-            </Link>
+          {/* Header - Centered close button */}
+          <div className="flex items-center justify-center p-4">
             <button 
               onClick={() => setIsMenuOpen(false)}
-              className="p-2 -mr-2 text-white/60 hover:text-white transition-colors"
+              className="p-2 text-white/80 hover:text-white transition-colors"
               aria-label="Close menu"
             >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
           </div>
           
           {/* Navigation */}
-          <nav className="flex-1 overflow-y-auto py-4 px-4 space-y-2">
+          <nav className="flex-1 overflow-y-auto py-2 px-6 space-y-3">
             {[
               { name: 'Home', href: '/' },
               { name: 'Services', href: '/services' },
@@ -128,10 +114,10 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`block py-3.5 px-4 rounded-xl transition-all duration-200 border border-transparent hover:border-white/10 ${
+                className={`block py-3.5 px-4 transition-all duration-200 ${
                   index === 0 
-                    ? 'bg-white/5 text-white' 
-                    : 'text-white/80 hover:bg-white/[0.03] hover:text-white'
+                    ? 'text-white' 
+                    : 'text-white/80 hover:text-white'
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -146,7 +132,7 @@ export default function Header() {
           </nav>
           
           {/* Footer */}
-          <div className="p-6 pt-4 mt-auto border-t border-white/5">
+          <div className="p-6 pt-4 mt-auto">
             <div className="flex items-center justify-center space-x-5 mb-4">
               <a 
                 href="https://github.com/HamzaBnJemaa" 
