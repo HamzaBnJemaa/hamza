@@ -1,6 +1,14 @@
 "use client"
 
 import { useEffect, useRef } from "react"
+import { Racing_Sans_One } from 'next/font/google'
+
+const racingSansOne = Racing_Sans_One({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-racing-sans',
+})
 
 export default function HeroContent() {
   const textRef = useRef<HTMLSpanElement>(null)
@@ -32,14 +40,10 @@ export default function HeroContent() {
         <h1 className="text-4xl sm:text-5xl md:text-6xl md:leading-16 tracking-tight font-light text-white mb-4">
           <span 
             ref={textRef}
-            className="font-splash text-5xl sm:text-6xl md:text-7xl tracking-tight"
+            className={`${racingSansOne.variable} racing-sans-one-regular text-5xl sm:text-6xl md:text-7xl`}
             style={{
               display: 'inline-block',
-              background: 'linear-gradient(90deg, #60a5fa, #a78bfa, #f472b6, #60a5fa)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundSize: '200% auto',
-              animation: 'gradient 8s ease infinite',
+              color: 'white'
             }}
           >
             Hamza Ben Jemaa
@@ -58,6 +62,12 @@ export default function HeroContent() {
 
         {/* Add custom styles */}
         <style jsx global>{`
+          @import url('https://fonts.googleapis.com/css2?family=Borel&family=Cairo:wght@200..1000&family=Playpen+Sans+Arabic:wght@100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Racing+Sans+One&family=Zen+Dots&display=swap');
+          .racing-sans-one-regular {
+            font-family: "Racing Sans One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+          }
           @keyframes gradient {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
@@ -70,9 +80,19 @@ export default function HeroContent() {
           <button className="px-8 py-3 rounded-full bg-transparent border border-white/30 text-white font-normal text-xs transition-all duration-200 hover:bg-white/10 hover:border-white/50 cursor-pointer">
             View Work
           </button>
-          <button className="px-8 py-3 rounded-full bg-white text-black font-normal text-xs transition-all duration-200 hover:bg-white/90 cursor-pointer">
-            Contact Me
-          </button>
+          <div className="relative flex items-center group" style={{ filter: "url(#gooey-filter)" }}>
+            <button className="absolute right-0 px-2.5 py-2 rounded-full bg-white text-black font-normal text-xs transition-all duration-300 hover:bg-white/90 cursor-pointer h-8 flex items-center justify-center -translate-x-10 group-hover:-translate-x-16 z-0">
+              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
+              </svg>
+            </button>
+            <a 
+              href="/contact"
+              className="px-6 py-2 rounded-full bg-white text-black font-normal text-xs transition-all duration-300 hover:bg-white/90 cursor-pointer h-8 flex items-center z-10"
+            >
+              Contact Me
+            </a>
+          </div>
         </div>
       </div>
     </main>
