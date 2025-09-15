@@ -15,8 +15,8 @@ export default function HeroContent() {
   }, [])
 
   return (
-    <main className="absolute bottom-8 left-8 z-20 max-w-lg">
-      <div className="text-left">
+    <main className="absolute bottom-8 left-4 sm:left-8 right-4 sm:right-auto z-20 max-w-lg w-[calc(100%-2rem)] sm:w-auto">
+      <div className="text-center sm:text-left">
         {/* SVG Filter for Liquid Effect */}
         <svg className="absolute w-0 h-0">
           <defs>
@@ -29,10 +29,10 @@ export default function HeroContent() {
         </svg>
 
         {/* Main Heading */}
-        <h1 className="text-5xl md:text-6xl md:leading-16 tracking-tight font-light text-white mb-4">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl md:leading-16 tracking-tight font-light text-white mb-4">
           <span 
             ref={textRef}
-            className="font-splash text-6xl md:text-7xl tracking-tight"
+            className="font-splash text-5xl sm:text-6xl md:text-7xl tracking-tight"
             style={{
               display: 'inline-block',
               background: 'linear-gradient(90deg, #60a5fa, #a78bfa, #f472b6, #60a5fa)',
@@ -45,7 +45,7 @@ export default function HeroContent() {
             Hamza Ben Jemaa
           </span>
           <br />
-          <span className="font-light tracking-wider text-white/80 text-lg uppercase mt-2 inline-block">Software developer</span>
+          <span className="font-light tracking-wider text-white/80 text-base sm:text-lg uppercase mt-2 inline-block">Software developer</span>
         </h1>
 
         {/* Description */}

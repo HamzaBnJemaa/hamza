@@ -1,6 +1,70 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
+@layer base {
+  :root {
+    --mobile-breakpoint: 640px;
+    --tablet-breakpoint: 768px;
+    --desktop-breakpoint: 1024px;
+  }
+  
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply antialiased text-base md:text-[16px] leading-relaxed;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Better text rendering for headings */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans font-medium leading-tight tracking-tight;
+  }
+  
+  /* Responsive typography */
+  h1 { @apply text-4xl sm:text-5xl md:text-6xl; }
+  h2 { @apply text-3xl sm:text-4xl md:text-5xl; }
+  h3 { @apply text-2xl sm:text-3xl md:text-4xl; }
+  h4 { @apply text-xl sm:text-2xl; }
+  h5 { @apply text-lg sm:text-xl; }
+  
+  /* Smooth scrolling for anchor links */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Better spacing for mobile */
+  .container {
+    @apply px-4 sm:px-6 lg:px-8;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  /* Responsive images */
+  img {
+    @apply max-w-full h-auto;
+  }
+  
+  /* Better touch targets for mobile */
+  @media (max-width: 640px) {
+    button, 
+    [role="button"], 
+    a[role="button"] {
+      min-height: 44px;
+      min-width: 44px;
+    }
+  }
+  
+  /* Prevent horizontal overflow */
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}
+
 @custom-variant dark (&:is(.dark *));
 
 :root {
