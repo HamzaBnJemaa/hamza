@@ -75,41 +75,78 @@ export default function Header() {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`fixed inset-0 z-40 transform transition-all duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-        <div className="absolute inset-0 bg-black/95 backdrop-blur-sm" onClick={() => setIsMenuOpen(false)}></div>
-        <div className="absolute right-0 top-0 h-full w-3/4 max-w-sm bg-gradient-to-b from-black to-gray-900 shadow-2xl transform transition-transform duration-300 ease-in-out">
-          <div className="flex flex-col h-full p-6 space-y-6 overflow-y-auto">
-            <div className="flex justify-end">
-              <button 
+      <div className={`fixed inset-0 z-50 overflow-hidden ${isMenuOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}>
+        {/* Backdrop */}
+        <div 
+          className={`absolute inset-0 bg-black/80 backdrop-blur-sm transition-opacity duration-300 ${isMenuOpen ? 'opacity-100' : 'opacity-0'}`}
+          onClick={() => setIsMenuOpen(false)}
+        />
+        
+        {/* Menu Panel */}
+        <div 
+          className={`absolute right-0 top-0 h-full w-4/5 max-w-xs bg-gradient-to-b from-gray-900 to-black shadow-2xl transform transition-transform duration-300 ease-in-out flex flex-col ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
+        >
+          {/* Header */}
+          <div className="flex items-center justify-between p-6 border-b border-white/10">
+            <div className="flex items-center space-x-2">
+              <div className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center">
+                <span className="text-white text-sm font-medium">HB</span>
+              </div>
+              <span className="text-white font-medium">Menu</span>
+            </div>
+            <button 
+              onClick={() => setIsMenuOpen(false)}
+              className="p-2 -mr-2 text-white/60 hover:text-white transition-colors"
+              aria-label="Close menu"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          
+          {/* Navigation */}
+          <nav className="flex-1 overflow-y-auto py-4 px-6 space-y-1">
+            {[
+              { name: 'Home', href: '/' },
+              { name: 'Services', href: '/services' },
+              { name: 'Tech Stack', href: '/tech-stack' },
+              { name: 'Projects', href: '#' },
+              { name: 'Contact', href: '/contact' }
+            ].map((item, index) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className={`block py-3 px-4 rounded-lg transition-all duration-200 ${
+                  index === 0 
+                    ? 'bg-white/10 text-white' 
+                    : 'text-white/70 hover:bg-white/5 hover:text-white'
+                }`}
                 onClick={() => setIsMenuOpen(false)}
-                className="p-2 text-white/70 hover:text-white transition-colors"
               >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-medium">{item.name}</span>
+                  <svg className="w-4 h-4 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </Link>
+            ))}
+          </nav>
+          
+          {/* Footer */}
+          <div className="p-6 border-t border-white/5">
+            <div className="flex items-center justify-center space-x-4 mb-4">
+              <a href="https://github.com/HamzaBnJemaa" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors">
+                <span className="sr-only">GitHub</span>
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
                 </svg>
-              </button>
+              </a>
             </div>
-            <nav className="flex-1 space-y-2">
-              {[
-                { name: 'Home', href: '/' },
-                { name: 'Services', href: '/services' },
-                { name: 'Tech Stack', href: '/tech-stack' },
-                { name: 'Projects', href: '#' },
-                { name: 'Contact', href: '/contact' }
-              ].map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="block px-4 py-3 text-lg font-light text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-200"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </nav>
-            <div className="pt-4 border-t border-white/10">
-              <p className="text-xs text-white/50 text-center">© {new Date().getFullYear()} Hamza Ben Jemaa</p>
-            </div>
+            <p className="text-xs text-center text-white/40">
+              © {new Date().getFullYear()} Hamza Ben Jemaa. All rights reserved.
+            </p>
           </div>
         </div>
       </div>

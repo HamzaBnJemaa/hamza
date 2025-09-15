@@ -41,14 +41,15 @@ export default function HeroContent() {
           <h1 className="text-5xl sm:text-6xl md:text-7xl tracking-tight font-light text-white mb-2">
             <span 
               ref={textRef}
-              className={`${racingSansOne.variable} racing-sans-one-regular block text-center sm:text-left`}
+              className={`${racingSansOne.variable} racing-sans-one-regular text-center sm:text-left`}
               style={{
                 color: 'white',
-                lineHeight: '1.1'
+                lineHeight: '1.1',
+                display: 'inline-block'
               }}
             >
-              <span className="block">Hamza</span>
-              <span className="block">Ben Jemaa</span>
+              <span className="block sm:inline">Hamza</span>
+              <span className="block sm:inline">Ben Jemaa</span>
             </span>
           </h1>
           <span className="font-light tracking-wider text-white/80 text-base sm:text-lg uppercase mt-2 inline-block">
