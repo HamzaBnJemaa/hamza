@@ -1,4 +1,3 @@
-import type React from "react"
 import type { Metadata } from "next"
 import { Figtree } from "next/font/google"
 import { GeistMono } from "geist/font/mono"
@@ -42,13 +41,12 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <style>{`
-html {
-  font-family: ${figtree.style.fontFamily};
-  --font-sans: ${figtree.variable};
-  --font-mono: ${GeistMono.variable};
-  --font-instrument-serif: ${instrumentSerif.variable};
-  --font-ngetic: ${ngetic.variable};
-}
+          :root {
+            --font-sans: ${figtree.variable};
+            --font-mono: ${GeistMono.variable};
+            --font-instrument-serif: ${instrumentSerif.variable};
+            --font-ngetic: ${ngetic.variable};
+          }
         `}</style>
       </head>
       <body className={`${figtree.variable} ${instrumentSerif.variable} ${GeistMono.variable} ${ngetic.variable} font-sans antialiased bg-black text-white min-h-screen`}>
