@@ -8,8 +8,8 @@ export default function Header() {
 
   return (
     <header className="relative z-50 flex items-center justify-between p-6">
-      {/* Logo */}
-      <Link href="/" className="flex items-center">
+      {/* Logo - Hidden on mobile */}
+      <Link href="/" className="hidden md:flex items-center">
         <img 
           src="/h-2.png" 
           alt="Logo"
@@ -37,10 +37,33 @@ export default function Header() {
       </nav>
 
       {/* Mobile Menu and GitHub Button */}
-      <div className="flex items-center space-x-3 md:hidden">
+      <div className="flex items-center justify-between w-full md:hidden">
+        {/* Mobile Menu Toggle with Logo */}
+        <button 
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="p-1 rounded-full hover:opacity-80 transition-opacity"
+        >
+          {isMenuOpen ? (
+            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          ) : (
+            <img 
+              src="/h-2.png" 
+              alt="Menu"
+              className="h-8 w-8 object-contain"
+              onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                target.onerror = null;
+                target.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PHBhdGggZD0iTTQgNmgxNk00IDEyaDE2TTQgMThoMTYiLz48L3N2Zz4=';
+              }}
+            />
+          )}
+        </button>
+        
         {/* GitHub Button with Arrow */}
         <div className="relative flex items-center group" style={{ filter: "url(#gooey-filter)" }}>
-          <button className="absolute right-0 px-2 py-1.5 rounded-full bg-white text-black font-normal text-xs transition-all duration-300 hover:bg-white/90 cursor-pointer h-7 flex items-center justify-center -translate-x-8 group-hover:-translate-x-10 z-0">
+          <button className="absolute right-0 px-2 py-1.5 rounded-full bg-white text-black font-normal text-xs transition-all duration-300 hover:bg-white/90 cursor-pointer h-7 flex items-center justify-center -translate-x-8 group-hover:-translate-x-14 z-0">
             <svg className="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M7 17L17 7M17 7H7M17 7V17" />
             </svg>
@@ -57,21 +80,7 @@ export default function Header() {
           </a>
         </div>
 
-        {/* Mobile Menu Toggle */}
-        <button 
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="p-2 rounded-full bg-white text-black hover:bg-gray-100 transition-colors"
-        >
-          {isMenuOpen ? (
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          ) : (
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
-            </svg>
-          )}
-        </button>
+      
       </div>
 
       {/* Mobile Menu */}

@@ -39,17 +39,17 @@ export default function HeroContent() {
         {/* Main Heading */}
         <div className="flex flex-col items-center sm:items-start">
           <h1 className="text-5xl sm:text-6xl md:text-7xl tracking-tight font-light text-white mb-2">
-            <div 
+            <span 
               ref={textRef}
               className={`${racingSansOne.variable} racing-sans-one-regular text-center sm:text-left`}
               style={{
                 color: 'white',
-                lineHeight: '1.1'
+                lineHeight: '1.1',
+                display: 'inline-block'
               }}
             >
-              <div className="block">Hamza</div>
-              <div className="block">Ben Jemaa</div>
-            </div>
+              Hamza Ben Jemaa
+            </span>
           </h1>
           <span className="font-light tracking-wider text-white/80 text-base sm:text-lg uppercase mt-2 inline-block">
             Software developer
