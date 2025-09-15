@@ -89,11 +89,23 @@ export default function Header() {
             boxShadow: '-4px 0 20px rgba(0, 0, 0, 0.5)'
           }}
         >
-          {/* Header - Centered close button */}
-          <div className="flex items-center justify-center p-4">
+          {/* Header with logo and close button */}
+          <div className="flex items-center justify-between p-4">
+            <Link href="/" className="flex items-center" onClick={() => setIsMenuOpen(false)}>
+              <img 
+                src="/h-2.png" 
+                alt="Logo" 
+                className="h-8 w-8 object-contain"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.onerror = null;
+                  target.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PHBhdGggZD0iTTE5IDE0YzAgMy43Ny0zLjU4MiA3LTggN3MtOC0zLjIzLTgtNywzLjU4Mi03LDgtNyw4LDMuMjMsOCA3WiIvPjxwYXRoIGQ9Ik0xMiAxN2E1IDUgMCAxIDAtMC0xMCIvPjwvc3ZnPg==';
+                }}
+              />
+            </Link>
             <button 
               onClick={() => setIsMenuOpen(false)}
-              className="p-2 text-white/80 hover:text-white transition-colors"
+              className="p-2 -mr-2 text-white/80 hover:text-white transition-colors"
               aria-label="Close menu"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
