@@ -48,7 +48,7 @@ export default function HeroContent() {
                 display: 'inline-block'
               }}
             >
-              <span className="block sm:inline">Hamza</span>
+              <span className="block sm:inline">Hamza </span>
               <span className="block sm:inline">Ben Jemaa</span>
             </span>
           </h1>
