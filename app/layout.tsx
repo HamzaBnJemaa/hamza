@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Figtree } from "next/font/google"
+import { Figtree, Splash } from "next/font/google"
 import { GeistMono } from "geist/font/mono"
 import { Instrument_Serif } from "next/font/google"
 import { ngetic } from "./fonts"
@@ -18,6 +18,13 @@ const instrumentSerif = Instrument_Serif({
   weight: ["400"],
   style: ["normal", "italic"],
   variable: "--font-instrument-serif",
+  display: "swap",
+})
+
+const splash = Splash({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-splash",
   display: "swap",
 })
 
@@ -49,7 +56,7 @@ export default function RootLayout({
           }
         `}</style>
       </head>
-      <body className={`${figtree.variable} ${instrumentSerif.variable} ${GeistMono.variable} ${ngetic.variable} font-sans antialiased bg-black text-white min-h-screen`}>
+      <body className={`${figtree.variable} ${instrumentSerif.variable} ${splash.variable} ${GeistMono.variable} ${ngetic.variable} font-sans antialiased bg-black text-white min-h-screen`}>
         <PageTransition>
           {children}
         </PageTransition>
