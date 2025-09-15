@@ -23,7 +23,7 @@ export default function HeroContent() {
   }, [])
 
   return (
-    <main className="absolute bottom-8 left-4 sm:left-8 right-4 sm:right-auto z-20 max-w-lg w-[calc(100%-2rem)] sm:w-auto">
+    <main className="absolute bottom-8 left-0 right-0 z-20 w-full px-4 sm:left-8 sm:right-auto sm:w-auto sm:px-0">
       <div className="text-center sm:text-left">
         {/* SVG Filter for Liquid Effect */}
         <svg className="absolute w-0 h-0">
@@ -37,20 +37,24 @@ export default function HeroContent() {
         </svg>
 
         {/* Main Heading */}
-        <h1 className="text-4xl sm:text-5xl md:text-6xl md:leading-16 tracking-tight font-light text-white mb-4">
-          <span 
-            ref={textRef}
-            className={`${racingSansOne.variable} racing-sans-one-regular text-5xl sm:text-6xl md:text-7xl`}
-            style={{
-              display: 'inline-block',
-              color: 'white'
-            }}
-          >
-            Hamza Ben Jemaa
+        <div className="flex flex-col items-center sm:items-start">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl tracking-tight font-light text-white mb-2">
+            <span 
+              ref={textRef}
+              className={`${racingSansOne.variable} racing-sans-one-regular block text-center sm:text-left`}
+              style={{
+                color: 'white',
+                lineHeight: '1.1'
+              }}
+            >
+              <span className="block">Hamza</span>
+              <span className="block">Ben Jemaa</span>
+            </span>
+          </h1>
+          <span className="font-light tracking-wider text-white/80 text-base sm:text-lg uppercase mt-2 inline-block">
+            Software developer
           </span>
-          <br />
-          <span className="font-light tracking-wider text-white/80 text-base sm:text-lg uppercase mt-2 inline-block">Software developer</span>
-        </h1>
+        </div>
 
         {/* Description */}
         <p className="text-xs font-light text-white/70 mb-4 leading-relaxed max-w-md">
@@ -76,23 +80,16 @@ export default function HeroContent() {
         `}</style>
 
         {/* Buttons */}
-        <div className="flex items-center gap-4 flex-wrap">
-          <button className="px-8 py-3 rounded-full bg-transparent border border-white/30 text-white font-normal text-xs transition-all duration-200 hover:bg-white/10 hover:border-white/50 cursor-pointer">
+        <div className="flex flex-row items-center justify-center sm:justify-start gap-4 mt-8">
+          <button className="px-6 py-2.5 rounded-full bg-transparent border border-white/30 text-white font-normal text-xs transition-all duration-200 hover:bg-white/10 hover:border-white/50 cursor-pointer whitespace-nowrap">
             View Work
           </button>
-          <div className="relative flex items-center group" style={{ filter: "url(#gooey-filter)" }}>
-            <button className="absolute right-0 px-2.5 py-2 rounded-full bg-white text-black font-normal text-xs transition-all duration-300 hover:bg-white/90 cursor-pointer h-8 flex items-center justify-center -translate-x-10 group-hover:-translate-x-16 z-0">
-              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
-              </svg>
-            </button>
-            <a 
-              href="/contact"
-              className="px-6 py-2 rounded-full bg-white text-black font-normal text-xs transition-all duration-300 hover:bg-white/90 cursor-pointer h-8 flex items-center z-10"
-            >
-              Contact Me
-            </a>
-          </div>
+          <a 
+            href="/contact"
+            className="px-6 py-2.5 rounded-full bg-white text-black font-normal text-xs transition-all duration-200 hover:bg-white/90 cursor-pointer whitespace-nowrap"
+          >
+            Contact Me
+          </a>
         </div>
       </div>
     </main>
