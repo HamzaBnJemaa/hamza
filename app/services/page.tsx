@@ -60,18 +60,6 @@ export default function ServicesPage() {
             ))}
           </div>
           
-          <div className="mt-16 text-center">
-            <h3 className="text-xl font-light mb-6">Looking for something else?</h3>
-            <Link 
-              href="/contact" 
-              className="inline-flex items-center px-6 py-3 border border-white/20 rounded-full text-white hover:bg-white/10 transition-colors group"
-            >
-              Let's discuss your project
-              <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
-            </Link>
-          </div>
         </div>
       </div>
     </ShaderBackground>
