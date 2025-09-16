@@ -18,29 +18,19 @@ const services: Service[] = [
     description: "Custom websites and web applications with modern technologies"
   },
   {
-    name: "Mobile Apps",
+    name: "Full-Stack Development",
+    icon: "💻",
+    description: "End-to-end web applications with both frontend and backend"
+  },
+  {
+    name: "Web Design",
+    icon: "🎨",
+    description: "Beautiful and responsive web designs that engage users"
+  },
+  {
+    name: "Mobile Development",
     icon: "📱",
     description: "Cross-platform mobile applications for iOS and Android"
-  },
-  {
-    name: "UI/UX Design",
-    icon: "🎨",
-    description: "Beautiful and intuitive user interfaces and experiences"
-  },
-  {
-    name: "Backend",
-    icon: "⚙️",
-    description: "Robust server-side solutions and APIs"
-  },
-  {
-    name: "DevOps",
-    icon: "🔧",
-    description: "CI/CD pipelines and cloud infrastructure"
-  },
-  {
-    name: "Consulting",
-    icon: "💡",
-    description: "Expert advice on technology and architecture"
   }
 ]
 

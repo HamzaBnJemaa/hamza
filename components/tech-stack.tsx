@@ -1,24 +1,37 @@
 "use client"
 
+import {
+  BiLogoReact,
+  BiLogoNodejs,
+  BiLogoTypescript,
+  BiLogoTailwindCss,
+  BiLogoMongodb,
+  BiLogoPostgresql,
+  BiLogoDocker,
+  BiLogoGit,
+  BiLogoJavascript,
+  BiLogoHtml5,
+  BiLogoCss3
+} from 'react-icons/bi';
+import { SiNextdotjs, SiLaravel, SiAstro } from 'react-icons/si';
+import { DiMysql } from 'react-icons/di';
+
 const technologies = [
-  { name: "React", icon: "⚛️" },
-  { name: "Next.js", icon: "▲" },
-  { name: "TypeScript", icon: "TS" },
-  { name: "Tailwind CSS", icon: "🎨" },
-  { name: "Node.js", icon: "🟢" },
-  { name: "Express", icon: "🚀" },
-  { name: "NestJS", icon: "🪶" },
-  { name: "GraphQL", icon: "🟣" },
-  { name: "REST APIs", icon: "🌐" },
-  { name: "React Native", icon: "📱" },
-  { name: "MongoDB", icon: "🍃" },
-  { name: "PostgreSQL", icon: "🐘" },
-  { name: "Docker", icon: "🐳" },
-  { name: "Git", icon: "🐙" },
-  { name: "GitHub", icon: "💻" },
-  { name: "AWS", icon: "☁️" },
-  { name: "Vercel", icon: "▲" },
-  { name: "Figma", icon: "🎨" },
+  { name: "React", icon: <BiLogoReact className="w-8 h-8 mx-auto" /> },
+  { name: "Next.js", icon: <SiNextdotjs className="w-8 h-8 mx-auto" /> },
+  { name: "TypeScript", icon: <BiLogoTypescript className="w-8 h-8 mx-auto" /> },
+  { name: "Tailwind CSS", icon: <BiLogoTailwindCss className="w-8 h-8 mx-auto" /> },
+  { name: "Node.js", icon: <BiLogoNodejs className="w-8 h-8 mx-auto" /> },
+  { name: "Laravel", icon: <SiLaravel className="w-8 h-8 mx-auto" /> },
+  { name: "Astro", icon: <SiAstro className="w-8 h-8 mx-auto" /> },
+  { name: "JavaScript", icon: <BiLogoJavascript className="w-8 h-8 mx-auto" /> },
+  { name: "HTML5", icon: <BiLogoHtml5 className="w-8 h-8 mx-auto" /> },
+  { name: "CSS3", icon: <BiLogoCss3 className="w-8 h-8 mx-auto" /> },
+  { name: "MongoDB", icon: <BiLogoMongodb className="w-8 h-8 mx-auto" /> },
+  { name: "PostgreSQL", icon: <BiLogoPostgresql className="w-8 h-8 mx-auto" /> },
+  { name: "MySQL", icon: <DiMysql className="w-8 h-8 mx-auto" /> },
+  { name: "Docker", icon: <BiLogoDocker className="w-8 h-8 mx-auto" /> },
+  { name: "Git", icon: <BiLogoGit className="w-8 h-8 mx-auto" /> },
 ]
 
 export default function TechStack() {
