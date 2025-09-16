@@ -31,7 +31,19 @@ export default function HeroContent() {
 
   return (
     <main className="absolute bottom-8 left-0 right-0 z-20 w-full px-4 sm:left-8 sm:right-auto sm:w-auto sm:px-0">
-      <div className="text-center sm:text-left">
+      {/* Waving Sticker */}
+      <div className="absolute 
+                      top-4 left-1/2 -translate-x-1/2 w-48 h-48 /* Mobile: up the texts, centered, smaller */
+                      md:top-1/3 md:left-full md:-translate-x-1/2 md:w-64 md:h-64 /* Desktop: next to text, larger, positioned relative to its text content */
+                      rotate-12 z-30">
+        <img 
+          src="/wave.png"
+          alt="Waving Sticker"
+          className="w-full h-full object-contain"
+        />
+      </div>
+      
+      <div className="text-center sm:text-left relative">
         {/* SVG Filter for Liquid Effect */}
         <svg className="absolute w-0 h-0">
           <defs>
