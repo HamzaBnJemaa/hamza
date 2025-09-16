@@ -45,10 +45,10 @@ export default function HeroContent() {
               style={{
                 color: 'white',
                 lineHeight: '1.1',
-                display: 'inline-block'
+                display: 'block'
               }}
             >
-              Hamza Ben Jemaa
+              Hamza <br/> Ben Jemaa
             </span>
           </h1>
           <span className="font-light tracking-wider text-white/80 text-base sm:text-lg uppercase mt-2 inline-block">
