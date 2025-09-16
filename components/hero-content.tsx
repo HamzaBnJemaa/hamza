@@ -11,12 +11,19 @@ const racingSansOne = Racing_Sans_One({
 })
 
 export default function HeroContent() {
-  const textRef = useRef<HTMLDivElement>(null)
+  const hamzaRef = useRef<HTMLSpanElement>(null)
+  const benJemaaRef = useRef<HTMLSpanElement>(null)
 
   useEffect(() => {
-    if (textRef.current) {
-      const text = textRef.current.textContent || ''
-      textRef.current.innerHTML = text.split('').map((char, i) => 
+    if (hamzaRef.current) {
+      const text = hamzaRef.current.textContent || ''
+      hamzaRef.current.innerHTML = text.split('').map((char, i) => 
+        `<span class="liquid-char" style="--i:${i}">${char === ' ' ? '&nbsp;' : char}</span>`
+      ).join('')
+    }
+    if (benJemaaRef.current) {
+      const text = benJemaaRef.current.textContent || ''
+      benJemaaRef.current.innerHTML = text.split('').map((char, i) => 
         `<span class="liquid-char" style="--i:${i}">${char === ' ' ? '&nbsp;' : char}</span>`
       ).join('')
     }
@@ -40,15 +47,24 @@ export default function HeroContent() {
         <div className="flex flex-col items-center sm:items-start">
           <h1 className="text-5xl sm:text-6xl md:text-7xl tracking-tight font-light text-white mb-2">
             <span 
-              ref={textRef}
-              className={`${racingSansOne.variable} racing-sans-one-regular text-center sm:text-left`}
+              ref={hamzaRef}
+              className={`${racingSansOne.variable} racing-sans-one-regular text-center sm:text-left block`}
               style={{
                 color: 'white',
                 lineHeight: '1.1',
-                display: 'block'
               }}
             >
-              Hamza <br/> Ben Jemaa
+              Hamza
+            </span>
+            <span 
+              ref={benJemaaRef}
+              className={`${racingSansOne.variable} racing-sans-one-regular text-center sm:text-left block -mt-2`}
+              style={{
+                color: 'white',
+                lineHeight: '1.1',
+              }}
+            >
+              Ben Jemaa
             </span>
           </h1>
           <span className="font-light tracking-wider text-white/80 text-base sm:text-lg uppercase mt-2 inline-block">
