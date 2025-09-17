@@ -22,6 +22,7 @@ const technologies = [
   { name: "Next.js", icon: <SiNextdotjs className="w-8 h-8 mx-auto" /> },
   { name: "TypeScript", icon: <BiLogoTypescript className="w-8 h-8 mx-auto" /> },
   { name: "Tailwind CSS", icon: <BiLogoTailwindCss className="w-8 h-8 mx-auto" /> },
+  { name: "React Bricks", icon: <img src="/bricks.png" alt="React Bricks" className="w-8 h-8 mx-auto" /> }, // Updated React Bricks icon
   { name: "Node.js", icon: <BiLogoNodejs className="w-8 h-8 mx-auto" /> },
   { name: "Laravel", icon: <SiLaravel className="w-8 h-8 mx-auto" /> },
   { name: "Astro", icon: <SiAstro className="w-8 h-8 mx-auto" /> },

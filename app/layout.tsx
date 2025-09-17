@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { Figtree, Splash } from "next/font/google"
 import { GeistMono } from "geist/font/mono"
 import { Instrument_Serif } from "next/font/google"
+import { Racing_Sans_One } from 'next/font/google'
 import { ngetic } from "./fonts"
 import "./globals.css"
 import { PageTransition } from "@/components/page-transition"
@@ -26,6 +27,13 @@ const splash = Splash({
   weight: ["400"],
   variable: "--font-splash",
   display: "swap",
+})
+
+const racingSansOne = Racing_Sans_One({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-racing-sans',
 })
 
 export const metadata: Metadata = {
@@ -53,6 +61,7 @@ export default function RootLayout({
             --font-mono: ${GeistMono.variable};
             --font-instrument-serif: ${instrumentSerif.variable};
             --font-ngetic: ${ngetic.variable};
+            --font-racing-sans: ${racingSansOne.variable};
           }
         `}</style>
       </head>

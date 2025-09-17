@@ -5,6 +5,14 @@ import Header from "@/components/header";
 import ShaderBackground from "@/components/shader-background";
 import ProjectCard from "@/components/project-card";
 import { Project } from "@/types/project";
+import { Racing_Sans_One } from 'next/font/google'
+
+const racingSansOne = Racing_Sans_One({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-racing-sans',
+})
 
 // Dummy data for projects
 const projects: Project[] = [
@@ -40,7 +48,13 @@ export default function ProjectsPage() {
       <div className="min-h-screen text-white px-4 py-8 sm:p-8 relative z-10">
         <div className="max-w-6xl mx-auto pt-16 sm:pt-20">
           <div className="mb-8 sm:mb-12 text-center">
-            <h1 className="text-4xl md:text-5xl font-light mb-4">
+            <h1
+              className={`${racingSansOne.variable} racing-sans-one-regular text-5xl sm:text-6xl md:text-7xl tracking-tight font-light text-white mb-2`}
+              style={{
+                color: 'white',
+                lineHeight: '1.1',
+              }}
+            >
               My Projects
             </h1>
             <div className="w-20 h-0.5 bg-gradient-to-r from-white to-transparent mx-auto mb-8"></div>
