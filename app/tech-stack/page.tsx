@@ -25,6 +25,7 @@ export default function TechStackPage() {
                 style={{
                   color: 'white',
                   lineHeight: '1.1',
+                  fontFamily: '"Racing Sans One" !important',
                 }}
               >
                 My Tech Stack
