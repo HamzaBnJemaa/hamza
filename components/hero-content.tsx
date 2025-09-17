@@ -93,19 +93,6 @@ export default function HeroContent() {
         </p>
 
         {/* Add custom styles */}
-        <style jsx global>{`
-          @import url('https://fonts.googleapis.com/css2?family=Borel&family=Cairo:wght@200..1000&family=Playpen+Sans+Arabic:wght@100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Racing+Sans+One&family=Zen+Dots&display=swap');
-          .racing-sans-one-regular {
-            font-family: "Racing Sans One", sans-serif;
-            font-weight: 400;
-            font-style: normal;
-          }
-          @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-          }
-        `}</style>
 
         {/* Buttons */}
         <div className="flex flex-row items-center justify-center sm:justify-start gap-4 mt-8">
