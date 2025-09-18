@@ -21,6 +21,7 @@ export default function ShaderBackground({ children }: ShaderBackgroundProps) {
       container.addEventListener("mouseenter", handleMouseEnter)
       container.addEventListener("mouseleave", handleMouseLeave)
     }
+    
 
     return () => {
       if (container) {
