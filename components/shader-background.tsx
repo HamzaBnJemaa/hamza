@@ -29,6 +29,7 @@ export default function ShaderBackground({ children }: ShaderBackgroundProps) {
       }
     }
   }, [])
+  
 
   return (
     <div ref={containerRef} className="min-h-screen bg-black relative overflow-x-hidden">
