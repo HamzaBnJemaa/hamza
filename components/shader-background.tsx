@@ -32,7 +32,6 @@ export default function ShaderBackground({ children }: ShaderBackgroundProps) {
 
   return (
     <div ref={containerRef} className="min-h-screen bg-black relative overflow-x-hidden">
-      {/* SVG Filters */}
       <svg className="absolute inset-0 w-0 h-0">
         <defs>
           <filter id="glass-effect" x="-50%" y="-50%" width="200%" height="200%">
