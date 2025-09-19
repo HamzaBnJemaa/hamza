@@ -4,32 +4,41 @@ import React, { JSX } from 'react'
 import Header from "@/components/header"
 import ShaderBackground from "@/components/shader-background"
 import Link from "next/link"
+import { FaLaptopCode, FaMobileAlt, FaPalette, FaGlobe } from "react-icons/fa";
+import { Racing_Sans_One } from 'next/font/google'
+
+const racingSansOne = Racing_Sans_One({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-racing-sans',
+})
 
 type Service = {
   name: string;
-  icon: string;
+  icon: JSX.Element;
   description: string;
 }
 
 const services: Service[] = [
   {
     name: "Web Development",
-    icon: "🌐",
+    icon: <FaGlobe />,
     description: "Custom websites and web applications with modern technologies"
   },
   {
     name: "Full-Stack Development",
-    icon: "💻",
+    icon: <FaLaptopCode />,
     description: "End-to-end web applications with both frontend and backend"
   },
   {
     name: "Web Design",
-    icon: "🎨",
+    icon: <FaPalette />,
     description: "Beautiful and responsive web designs that engage users"
   },
   {
     name: "Mobile Development",
-    icon: "📱",
+    icon: <FaMobileAlt />,
     description: "Cross-platform mobile applications for iOS and Android"
   }
 ]
@@ -42,11 +51,10 @@ export default function ServicesPage() {
         <div className="max-w-6xl mx-auto pt-20">
           <div className="mb-12">
             <h1 
-              className={`racing-sans-one-regular text-5xl sm:text-6xl md:text-7xl tracking-tight font-light text-white mb-2`}
+              className={`${racingSansOne.variable} racing-sans-one-regular text-5xl sm:text-6xl md:text-7xl tracking-tight font-light text-white mb-2`}
               style={{
                 color: 'white',
                 lineHeight: '1.1',
-                fontFamily: '"Racing Sans One" !important',
               }}
             >
               My Services
