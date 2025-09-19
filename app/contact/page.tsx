@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from "react"
+import React, { useState, JSX } from "react"
 import Header from "@/components/header"
 import ShaderBackground from "@/components/shader-background"
 import { Racing_Sans_One } from 'next/font/google'
@@ -20,10 +20,6 @@ type SocialLink = {
 }
 
 export default function ContactPage() {
-  const [email, setEmail] = useState("")
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState<null | 'success' | 'error'>(null)
-
   const socialLinks: SocialLink[] = [
     {
       name: "GitHub",
@@ -67,29 +63,20 @@ export default function ContactPage() {
     }
   ]
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    if (!email) return
-    
-    setIsSubmitting(true)
-    
-    try {
-      // Here you would typically send the email to your backend
-      // For now, we'll simulate a successful submission
-      await new Promise(resolve => setTimeout(resolve, 1000))
-      setSubmitStatus('success')
-      setEmail("")
-    } catch (error) {
-      setSubmitStatus('error')
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
-
   return (
     <ShaderBackground>
       <Header />
       <div className="min-h-screen text-white px-4 py-8 sm:p-8 relative z-10">
+        {/* SVG Filter for Liquid Effect */}
+        <svg className="absolute w-0 h-0">
+          <defs>
+            <filter id="gooey-filter">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="gooey" />
+              <feComposite in="SourceGraphic" in2="gooey" operator="atop"/>
+            </filter>
+          </defs>
+        </svg>
         <div className="max-w-4xl mx-auto pt-16 sm:pt-20">
           <div className="mb-8 sm:mb-12 text-center">
             <h1
@@ -97,7 +84,6 @@ export default function ContactPage() {
               style={{
                 color: 'white',
                 lineHeight: '1.1',
-                // Removed: fontFamily: '"Racing Sans One" !important',
               }}
             >
               Let's Connect
@@ -134,34 +120,22 @@ export default function ContactPage() {
             >
               benjemaahamza09@gmail.com
             </a>
-            <form onSubmit={handleSubmit} className="mt-4 space-y-4">
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-opacity-90 transition-opacity disabled:opacity-50 flex items-center justify-center"
-              >
-                {isSubmitting ? (
-                  <>
-                    <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                    </svg>
-                    Sending...
-                  </>
-                ) : 'Open Email'}
-              </button>
+            <form className="mt-4 space-y-4">
+              <div className="relative flex items-center group w-fit mx-auto" style={{ filter: "url(#gooey-filter)" }}>
+                <button className="absolute right-0 px-2.5 py-2 rounded-full bg-white text-black font-normal text-xs transition-all duration-300 hover:bg-white/90 cursor-pointer h-8 flex items-center justify-center -translate-x-10 group-hover:-translate-x-25 z-0">
+                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
+                  </svg>
+                </button>
+                <a
+                  href="mailto:benjemaahamza09@gmail.com"
+                  className="px-6 py-2 rounded-full bg-white text-black font-normal text-xs transition-all duration-300 hover:bg-white/90 cursor-pointer h-8 flex items-center z-10"
+                >
+                  Open Email
+                </a>
+              </div>
               
-              {submitStatus === 'success' && (
-                <div className="p-4 bg-green-500/10 border border-green-500/30 rounded-lg text-green-400 text-sm text-center">
-                  Email opened in your default mail client!
-                </div>
-              )}
-              
-              {submitStatus === 'error' && (
-                <div className="p-4 bg-red-500/10 border border-red-500/30 rounded-lg text-red-400 text-sm text-center">
-                  Something went wrong. Please try again or contact me directly at your.email@example.com
-                </div>
-              )}
+
             </form>
           </div>
         </div>
