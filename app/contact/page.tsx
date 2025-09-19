@@ -3,6 +3,14 @@
 import React, { useState } from "react"
 import Header from "@/components/header"
 import ShaderBackground from "@/components/shader-background"
+import { Racing_Sans_One } from 'next/font/google'
+
+const racingSansOne = Racing_Sans_One({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-racing-sans',
+})
 
 type SocialLink = {
   name: string
@@ -85,11 +93,11 @@ export default function ContactPage() {
         <div className="max-w-4xl mx-auto pt-16 sm:pt-20">
           <div className="mb-8 sm:mb-12 text-center">
             <h1
-              className={`racing-sans-one-regular text-5xl sm:text-6xl md:text-7xl tracking-tight font-light text-white mb-2`}
+              className={`${racingSansOne.variable} racing-sans-one-regular text-5xl sm:text-6xl md:text-7xl tracking-tight font-light text-white mb-2`}
               style={{
                 color: 'white',
                 lineHeight: '1.1',
-                fontFamily: '"Racing Sans One" !important',
+                // Removed: fontFamily: '"Racing Sans One" !important',
               }}
             >
               Let's Connect
