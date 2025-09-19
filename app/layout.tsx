@@ -4,7 +4,6 @@ import { GeistMono } from "geist/font/mono"
 import { Instrument_Serif } from "next/font/google"
 import { Racing_Sans_One } from 'next/font/google'
 import { ngetic } from "./fonts"
-import Spline from '@splinetool/react-spline';
 import "./globals.css"
 import { PageTransition } from "@/components/page-transition"
 
@@ -66,13 +65,10 @@ export default function RootLayout({
           }
         `}</style>
       </head>
-      <body className={`${figtree.variable} ${instrumentSerif.variable} ${splash.variable} ${GeistMono.variable} ${ngetic.variable} font-sans antialiased bg-black text-white min-h-screen relative`}>
-        <Spline className="absolute top-0 left-0 w-full h-full object-cover z-0" scene="https://prod.spline.design/8Bt6EhbjS1FSdH-R/scene.splinecode" />
-        <div className="relative z-10">
-          <PageTransition>
-            {children}
-          </PageTransition>
-        </div>
+      <body className={`${figtree.variable} ${instrumentSerif.variable} ${splash.variable} ${GeistMono.variable} ${ngetic.variable} font-sans antialiased bg-black text-white min-h-screen`}>
+        <PageTransition>
+          {children}
+        </PageTransition>
       </body>
     </html>
   )

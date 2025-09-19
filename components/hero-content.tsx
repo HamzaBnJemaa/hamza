@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react"
 import { Racing_Sans_One } from 'next/font/google'
+import Spline from '@splinetool/react-spline';
 
 const racingSansOne = Racing_Sans_One({
   weight: '400',
@@ -30,8 +31,9 @@ export default function HeroContent() {
   }, [])
 
   return (
-    <main className="absolute inset-0 z-20 w-full h-full">
-      <div className="absolute bottom-8 left-0 right-0 w-full px-4 sm:left-8 sm:right-auto sm:w-auto sm:px-0">
+    <main className="absolute inset-0 z-10 w-full h-full">
+      <Spline className="absolute top-0 left-0 w-full h-full object-cover" scene="https://prod.spline.design/8Bt6EhbjS1FSdH-R/scene.splinecode" />
+      <div className="absolute bottom-8 left-0 right-0 z-20 w-full px-4 sm:left-8 sm:right-auto sm:w-auto sm:px-0">
         
         <div className="text-center sm:text-left relative">
           {/* SVG Filter for Liquid Effect */}
