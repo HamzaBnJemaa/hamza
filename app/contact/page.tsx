@@ -77,8 +77,8 @@ export default function ContactPage() {
             </filter>
           </defs>
         </svg>
-        <div className="max-w-4xl mx-auto pt-16 sm:pt-20">
-          <div className="mb-8 sm:mb-12 text-center">
+        <div className="max-w-4xl mx-auto pt-16 sm:pt-20 text-center relative">
+          <div className="mb-8 sm:mb-12 text-center relative">
             <h1
               className={`${racingSansOne.variable} racing-sans-one-regular text-5xl sm:text-6xl md:text-7xl tracking-tight font-light text-white mb-2`}
               style={{
@@ -111,9 +111,10 @@ export default function ContactPage() {
             ))}
           </div>
           
+          
           {/* Email Form */}
-          <div className="max-w-md mx-auto px-4 sm:px-0">
-            <div className="text-2xl font-light mb-1">Email</div>
+          <div className="max-w-md mx-auto px-4 sm:px-0 text-center">
+            <div className={`${racingSansOne.variable} racing-sans-one-regular text-2xl font-light mb-1`}>Email</div>
             <a 
               href="mailto:benjemaahamza09@gmail.com" 
               className="text-white/70 hover:text-white transition-colors text-lg"

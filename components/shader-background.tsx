@@ -60,20 +60,6 @@ export default function ShaderBackground({ children }: ShaderBackgroundProps) {
         </defs>
       </svg>
 
-      {/* Background Shaders */}
-      <div className="absolute inset-0 w-full h-full overflow-hidden">
-        <MeshGradient
-          className="w-full h-full"
-          colors={["#000000", "#93c5fd", "#dbeafe", "#1e3a8a", "#1e40af"]}
-          speed={0.3}
-        />
-        <MeshGradient
-          className="absolute inset-0 w-full h-full opacity-60"
-          colors={["#000000", "#dbeafe", "#93c5fd", "#000000"]}
-          speed={0.2}
-        />
-      </div>
-
       {/* Theme Provider Implementation */}
       <div className="theme-blue-pastel">
         {children}
