@@ -3,6 +3,14 @@
 import Header from "@/components/header"
 import ShaderBackground from "@/components/shader-background"
 import TechStack from "@/components/tech-stack"
+import { Racing_Sans_One } from 'next/font/google'
+
+const racingSansOne = Racing_Sans_One({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-racing-sans',
+})
 
 export default function TechStackPage() {
   return (
@@ -21,11 +29,11 @@ export default function TechStackPage() {
             </div>
             <div className="text-center md:text-left flex-grow">
               <h1 
-                className={`racing-sans-one-regular text-5xl sm:text-6xl md:text-7xl tracking-tight font-light text-white mb-2`}
+                className={`${racingSansOne.variable} racing-sans-one-regular text-5xl sm:text-6xl md:text-7xl tracking-tight font-light text-white mb-2`}
                 style={{
                   color: 'white',
                   lineHeight: '1.1',
-                  fontFamily: '"Racing Sans One" !important',
+                  // Removed: fontFamily: '"Racing Sans One" !important',
                 }}
               >
                 My Tech Stack
