@@ -16,6 +16,7 @@ import {
 import { SiNextdotjs, SiLaravel, SiAstro, SiGithub, SiLinkedin, SiX, SiInstagram } from 'react-icons/si';
 import { DiMysql } from 'react-icons/di';
 import { FaXTwitter } from 'react-icons/fa6';
+import { BiCodeAlt } from 'react-icons/bi'; // Import BiCodeAlt for Liquid
 
 const technologies = [
   { name: "React", icon: <BiLogoReact className="w-8 h-8 mx-auto" /> },
@@ -29,6 +30,7 @@ const technologies = [
   { name: "JavaScript", icon: <BiLogoJavascript className="w-8 h-8 mx-auto" /> },
   { name: "HTML5", icon: <BiLogoHtml5 className="w-8 h-8 mx-auto" /> },
   { name: "CSS3", icon: <BiLogoCss3 className="w-8 h-8 mx-auto" /> },
+  { name: "Liquid", icon: <BiCodeAlt className="w-8 h-8 mx-auto" /> }, // Added Liquid
   { name: "MongoDB", icon: <BiLogoMongodb className="w-8 h-8 mx-auto" /> },
   { name: "PostgreSQL", icon: <BiLogoPostgresql className="w-8 h-8 mx-auto" /> },
   { name: "MySQL", icon: <DiMysql className="w-8 h-8 mx-auto" /> },
