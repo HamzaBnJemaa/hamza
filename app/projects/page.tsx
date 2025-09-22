@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Header from "@/components/header";
-import ShaderBackground from "@/components/shader-background";
+// import ShaderBackground from "@/components/shader-background";
 import ProjectCard from "@/components/project-card";
 import { Project } from "@/types/project";
 import { Racing_Sans_One } from 'next/font/google'
@@ -43,7 +43,8 @@ const projects: Project[] = [
 
 export default function ProjectsPage() {
   return (
-    <ShaderBackground>
+    // <ShaderBackground>
+    <>
       <Header />
       <div className="min-h-screen text-white px-4 py-8 sm:p-8 relative z-10">
         <div className="max-w-6xl mx-auto pt-16 sm:pt-20">
@@ -71,6 +72,7 @@ export default function ProjectsPage() {
           </div>
         </div>
       </div>
-    </ShaderBackground>
+    </>
+    // </ShaderBackground>
   );
 }

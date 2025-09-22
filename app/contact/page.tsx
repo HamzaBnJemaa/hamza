@@ -2,7 +2,7 @@
 
 import React, { useState, JSX } from "react"
 import Header from "@/components/header"
-import ShaderBackground from "@/components/shader-background"
+// import ShaderBackground from "@/components/shader-background"
 import { Racing_Sans_One } from 'next/font/google'
 
 const racingSansOne = Racing_Sans_One({
@@ -64,7 +64,8 @@ export default function ContactPage() {
   ]
 
   return (
-    <ShaderBackground>
+    // <ShaderBackground>
+    <>
       <Header />
       <div className="min-h-screen text-white px-4 py-8 sm:p-8 relative z-10">
         {/* SVG Filter for Liquid Effect */}
@@ -155,6 +156,7 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
-    </ShaderBackground>
+    </>
+    // </ShaderBackground>
   )
 }

@@ -17,6 +17,14 @@ import { SiNextdotjs, SiLaravel, SiAstro, SiGithub, SiLinkedin, SiX, SiInstagram
 import { DiMysql } from 'react-icons/di';
 import { FaXTwitter } from 'react-icons/fa6';
 import { BiCodeAlt } from 'react-icons/bi'; // Import BiCodeAlt for Liquid
+import { Racing_Sans_One } from 'next/font/google' // Import Racing_Sans_One font
+
+const racingSansOne = Racing_Sans_One({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-racing-sans',
+})
 
 const technologies = [
   { name: "React", icon: <BiLogoReact className="w-8 h-8 mx-auto" /> },
@@ -32,9 +40,7 @@ const technologies = [
   { name: "CSS3", icon: <BiLogoCss3 className="w-8 h-8 mx-auto" /> },
   { name: "Liquid", icon: <BiCodeAlt className="w-8 h-8 mx-auto" /> }, // Added Liquid
   { name: "MongoDB", icon: <BiLogoMongodb className="w-8 h-8 mx-auto" /> },
-  { name: "PostgreSQL", icon: <BiLogoPostgresql className="w-8 h-8 mx-auto" /> },
   { name: "MySQL", icon: <DiMysql className="w-8 h-8 mx-auto" /> },
-  { name: "Docker", icon: <BiLogoDocker className="w-8 h-8 mx-auto" /> },
   { name: "Git", icon: <BiLogoGit className="w-8 h-8 mx-auto" /> },
 ]
 
@@ -74,7 +80,7 @@ export default function TechStack() {
   return (
     <>
       <div className="mb-12">
-        <h2 className="text-2xl font-light mb-6 text-center">Technologies I Use</h2>
+        <h2 className={`${racingSansOne.variable} racing-sans-one-regular text-2xl font-light mb-6 text-center`}>Technologies I Use</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
           {technologies.map((tech) => (
             <div 

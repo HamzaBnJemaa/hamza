@@ -3,7 +3,6 @@
 
 :root {
   /* Updated color tokens to match dramatic lighting design brief */
-  --background: #000000; /* Pure black background */
   --foreground: oklch(1 0 0); /* Pure white for text and highlights */
   --card: oklch(0.95 0 0); /* Light gray for subtle backgrounds */
   --card-foreground: oklch(0 0 0); /* Black text on light cards */
@@ -43,7 +42,6 @@
 
 .dark {
   /* Dark mode maintains the same dramatic black background theme */
-  --background: #000000;
   --foreground: oklch(1 0 0);
   --card: oklch(0.1 0 0);
   --card-foreground: oklch(1 0 0);
@@ -85,8 +83,13 @@
   border-color: var(--border);
 }
 
+html,
 body {
-  background-color: var(--background);
+  background-color: transparent !important;
+  background: none !important;
+}
+
+body {
   color: var(--foreground);
   font-family: var(--font-figtree);
   overflow: hidden;

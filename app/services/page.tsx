@@ -2,7 +2,7 @@
 
 import React, { JSX } from 'react'
 import Header from "@/components/header"
-import ShaderBackground from "@/components/shader-background"
+// import ShaderBackground from "@/components/shader-background"
 import Link from "next/link"
 import { FaLaptopCode, FaMobileAlt, FaPalette, FaGlobe } from "react-icons/fa";
 import { Racing_Sans_One } from 'next/font/google'
@@ -45,7 +45,8 @@ const services: Service[] = [
 
 export default function ServicesPage() {
   return (
-    <ShaderBackground>
+    // <ShaderBackground>
+    <>
       <Header />
       <div className="min-h-screen text-white p-8 relative z-10">
         <div className="max-w-6xl mx-auto pt-20">
@@ -77,6 +78,7 @@ export default function ServicesPage() {
           
         </div>
       </div>
-    </ShaderBackground>
+    </>
+    // </ShaderBackground>
   )
 }
