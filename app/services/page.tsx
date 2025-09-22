@@ -60,20 +60,35 @@ export default function ServicesPage() {
             >
               My Services
             </h1>
-            <div className="w-20 h-0.5 bg-gradient-to-r from-white to-transparent mb-8"></div>
+            <div className="w-20 h-0.5 bg-gradient-to-r from-white to-transparent mb-8 mx-auto"></div>
           </div>
           
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-            {services.map((service, index) => (
-              <div 
-                key={index}
-                className="text-center p-6 hover:bg-white/5 rounded-lg transition-colors"
-              >
-                <div className="text-4xl mb-3">{service.icon}</div>
-                <h3 className="text-lg font-medium mb-2">{service.name}</h3>
-                <p className="text-white/70 text-sm">{service.description}</p>
-              </div>
-            ))}
+          <div className="flex justify-around items-start w-full px-4">
+            <div className="flex flex-col gap-8 w-1/3 pr-4">
+              {services.slice(0, 2).map((service, index) => (
+                <div 
+                  key={index}
+                  className="text-center p-6 hover:bg-white/5 rounded-lg transition-colors"
+                >
+                  <div className="text-4xl mb-3">{service.icon}</div>
+                  <h3 className={`${racingSansOne.variable} racing-sans-one-regular text-lg font-medium mb-2`}>{service.name}</h3>
+                  <p className="text-white/70 text-sm">{service.description}</p>
+                </div>
+              ))}
+            </div>
+            
+            <div className="flex flex-col gap-8 w-1/3 pl-4">
+              {services.slice(2, 4).map((service, index) => (
+                <div 
+                  key={index}
+                  className="text-center p-6 hover:bg-white/5 rounded-lg transition-colors"
+                >
+                  <div className="text-4xl mb-3">{service.icon}</div>
+                  <h3 className={`${racingSansOne.variable} racing-sans-one-regular text-lg font-medium mb-2`}>{service.name}</h3>
+                  <p className="text-white/70 text-sm">{service.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
           
         </div>

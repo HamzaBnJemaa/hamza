@@ -6,7 +6,7 @@ import { Racing_Sans_One } from 'next/font/google'
 import { ngetic } from "./fonts"
 import "./globals.css"
 import { PageTransition } from "@/components/page-transition"
-import SplineCanvas from "@/components/SplineCanvas"; // Import SplineCanvas component
+import SplineClientWrapper from "@/components/SplineClientWrapper"; // Import SplineClientWrapper
 
 const figtree = Figtree({
   subsets: ["latin"],
@@ -67,7 +67,7 @@ export default function RootLayout({
         `}</style>
       </head>
       <body className={`${figtree.variable} ${instrumentSerif.variable} ${splash.variable} ${GeistMono.variable} ${ngetic.variable} font-sans antialiased text-white min-h-screen`}>
-        <SplineCanvas /> { /* Add SplineCanvas here */}
+        <SplineClientWrapper /> { /* Add SplineClientWrapper here */}
         <div className="relative z-10">
           <PageTransition>
             {children}

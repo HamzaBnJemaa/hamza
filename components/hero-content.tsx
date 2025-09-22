@@ -88,7 +88,7 @@ export default function HeroContent() {
 
           {/* Buttons */}
           <div className="flex flex-row items-center justify-center sm:justify-start gap-4 mt-8">
-            <button className="px-6 py-2.5 rounded-full bg-transparent border border-white/30 text-white font-normal text-xs transition-all duration-200 hover:bg-white/10 hover:border-white/50 cursor-pointer whitespace-nowrap">
+            <button className="px-6 py-2.5 rounded-full bg-white text-black font-normal text-xs transition-all duration-300 hover:bg-white/90 cursor-pointer whitespace-nowrap">
               View Work
             </button>
             <a 
