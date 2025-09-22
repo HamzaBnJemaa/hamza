@@ -89,6 +89,12 @@ body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-figtree);
+  overflow: hidden;
+}
+
+/* For Webkit browsers (Chrome, Safari, Edge) */
+body::-webkit-scrollbar {
+  display: none;
 }
 
 .font-ngetic {
