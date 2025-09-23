@@ -92,7 +92,9 @@ body {
 body {
   color: var(--foreground);
   font-family: var(--font-figtree);
-  overflow: hidden;
+  overflow-y: scroll; /* Enable vertical scrolling */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 /* For Webkit browsers (Chrome, Safari, Edge) */
