@@ -24,7 +24,7 @@ const projects: Project[] = [
     githubLink: "https://github.com/HamzaBnJemaa/hamzaportfolio",
     liveLink: "#"
   },
-  
+
   {
     title: "E-commerce Platform",
     description: "A full-stack e-commerce application with user authentication, product listings, and a shopping cart.",
@@ -32,6 +32,7 @@ const projects: Project[] = [
     image: "/images/ecommerce.jpg", // Placeholder image
     githubLink: "https://github.com/HamzaBnJemaa/ecommerce-platform",
   },
+  
   {
     title: "Task Management App",
     description: "A simple task management application to help users organize their daily tasks.",
