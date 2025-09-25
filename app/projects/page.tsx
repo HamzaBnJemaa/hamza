@@ -24,6 +24,7 @@ const projects: Project[] = [
     githubLink: "https://github.com/HamzaBnJemaa/hamzaportfolio",
     liveLink: "#"
   },
+  
   {
     title: "E-commerce Platform",
     description: "A full-stack e-commerce application with user authentication, product listings, and a shopping cart.",
