@@ -41,7 +41,7 @@ const projects: Project[] = [
     githubLink: "https://github.com/HamzaBnJemaa/task-management-app",
     liveLink: "#"
   },
-  
+
   {
     title: "Codini Project",
     description: "A project showcasing an image called codini.jpg.",
