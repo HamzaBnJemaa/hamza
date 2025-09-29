@@ -40,7 +40,7 @@ const projects: Project[] = [
     image: "/images/task-manager.jpg", // Placeholder image
     githubLink: "https://github.com/HamzaBnJemaa/task-management-app",
     liveLink: "#"
-  },
+  }, 
 
   {
     title: "Codini Project",
