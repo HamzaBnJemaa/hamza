@@ -3,6 +3,14 @@ import { Project } from '@/types/project';
 import Image from 'next/image';
 import { FaGithub } from 'react-icons/fa';
 import { FiExternalLink } from 'react-icons/fi';
+import { Racing_Sans_One } from 'next/font/google'
+
+const racingSansOne = Racing_Sans_One({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-racing-sans',
+})
 
 interface ProjectCardProps {
   project: Project;
@@ -18,10 +26,10 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         height={300}
         className="rounded-md mb-4 object-cover w-full h-48"
       />
-      <h3 className="text-xl font-semibold mb-2 text-white">{project.title}</h3>
-      <p className="text-white/70 text-sm flex-grow mb-4">{project.description}</p>
+      <h3 className={`${racingSansOne.variable} racing-sans-one-regular text-xl font-semibold mb-2 text-white text-center`}>{project.title}</h3>
+      <p className="text-white/70 text-sm flex-grow mb-4 text-center">{project.description}</p>
       
-      <div className="flex flex-wrap gap-2 mb-4">
+      <div className="flex flex-wrap gap-2 mb-4 justify-center">
         {project.technologies.map((tech, index) => (
           <span key={index} className="bg-blue-600/30 text-blue-300 text-xs px-3 py-1 rounded-full">
             {tech}

@@ -25,32 +25,6 @@ const projects: Project[] = [
     liveLink: "https://kitelab.vercel.app/" 
   },
   {
-    title: "Portfolio Website",
-    description: "A personal portfolio website built to showcase my projects and skills.",
-    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Shadcn/ui"],
-    image: "/images/portfolio.jpg", // Placeholder image
-    githubLink: "https://github.com/HamzaBnJemaa/hamzaportfolio",
-    liveLink: "#"
-  },
-
-  {
-    title: "E-commerce Platform",
-    description: "A full-stack e-commerce application with user authentication, product listings, and a shopping cart.",
-    technologies: ["Next.js", "React", "Node.js", "Express", "MongoDB", "Stripe"],
-    image: "/images/ecommerce.jpg", // Placeholder image
-    githubLink: "https://github.com/HamzaBnJemaa/ecommerce-platform",
-  },
-
-  {
-    title: "Task Management App",
-    description: "A simple task management application to help users organize their daily tasks.",
-    technologies: ["React", "TypeScript", "Firebase", "Redux"],
-    image: "/images/task-manager.jpg", // Placeholder image
-    githubLink: "https://github.com/HamzaBnJemaa/task-management-app",
-    liveLink: "#"
-  }, 
-
-  {
     title: "Hannibal Marketplace",
     description: "Your Ultimate Shopping Destination! At HANNIBAL, we redefine the way you shop by providing a seamless and enjoyable online shopping experience. Dive into a world of endless choices, unbeatable prices, and unparalleled convenience right at your fingertips",
     technologies: ["NEXT.JS", "Tailwind", "TypeScript", "Cloudinary"],
@@ -72,7 +46,6 @@ const projects: Project[] = [
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "MySQL"],
     image: "/kitedesk.jpg",
     githubLink: "#", // Placeholder
-    liveLink: "Still on Work" 
   },
 
   {
@@ -81,7 +54,6 @@ const projects: Project[] = [
     technologies: ["Next.js", "Tailwind", "Motion Div", "Adobe Photoshop", "JWT", "Express.js", "TypeScript", "JavaScript", "MySQL", "Framer Motion"],
     image: "/kitelance.jpg", // Placeholder image
     githubLink: "#", // Placeholder
-    liveLink: "Soon"
   },
 
   {
