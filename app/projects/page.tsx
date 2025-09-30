@@ -82,6 +82,15 @@ const projects: Project[] = [
     image: "/kitelance.jpg", // Placeholder image
     githubLink: "#", // Placeholder
     liveLink: "Soon"
+  },
+
+  {
+    title: "ArveaLik",
+    description: "A full-stack marketplace for natural cosmetics, part of the Arvea brand, offering premium beauty products.",
+    technologies: ["Next.js", "Tailwind", "Motion Div", "Adobe Photoshop", "JWT", "Express.js", "TypeScript", "JavaScript", "MySQL", "Framer Motion", "Stripe"],
+    image: "/arvealik.png", 
+    githubLink: "https://github.com/HamzaBnJemaa/arvea.git",
+    liveLink: "https://arvealikk.vercel.app/"
   }
 ];
 
