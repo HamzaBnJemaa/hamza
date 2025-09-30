@@ -2,6 +2,7 @@ import React from 'react';
 import { Project } from '@/types/project';
 import Image from 'next/image';
 import { FaGithub } from 'react-icons/fa';
+import { FiExternalLink } from 'react-icons/fi';
 
 interface ProjectCardProps {
   project: Project;
@@ -33,9 +34,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           href={project.githubLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white hover:text-blue-400 transition-colors flex items-center gap-2"
+          className="px-4 py-2 rounded-full bg-white text-black font-normal text-xs transition-all duration-300 hover:bg-white/90 cursor-pointer flex items-center gap-2"
         >
-          <FaGithub className="w-5 h-5" />
+          <FaGithub className="w-4 h-4" />
           GitHub
         </a>
         {project.liveLink && (
@@ -43,8 +44,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             href={project.liveLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white hover:text-blue-400 transition-colors flex items-center gap-2"
+            className="px-4 py-2 rounded-full bg-white text-black font-normal text-xs transition-all duration-300 hover:bg-white/90 cursor-pointer flex items-center gap-2"
           >
+            <FiExternalLink className="w-4 h-4" />
             Live Demo
           </a>
         )}
