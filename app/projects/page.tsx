@@ -43,6 +43,15 @@ const projects: Project[] = [
   }, 
 
   {
+    title: "Hannibal Marketplace",
+    description: "Your Ultimate Shopping Destination! At HANNIBAL, we redefine the way you shop by providing a seamless and enjoyable online shopping experience. Dive into a world of endless choices, unbeatable prices, and unparalleled convenience right at your fingertips",
+    technologies: ["NEXT.JS", "Tailwind", "TypeScript", "Cloudinary"],
+    image: "/hannibal.jpg", 
+    githubLink: "https://github.com/HamzaBnJemaa/Hannibal-new-version.git",
+    liveLink: "#"
+  },
+
+  {
     title: "Codini Project",
     description: "A project showcasing an image called codini.jpg.",
     technologies: ["Next.js", "React"],
