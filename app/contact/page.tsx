@@ -144,7 +144,7 @@ export default function ContactPage() {
                   </svg>
                 </button>
                 <a
-                  href="/path/to/your/resume.pdf" // Placeholder for resume PDF
+                  href="/Hamza sep.pdf" // Placeholder for resume PDF
                   download="Hamza_Resume.pdf" // Suggested filename for download
                   className="px-6 py-2 rounded-full bg-white text-black font-normal text-xs transition-all duration-300 hover:bg-white/90 cursor-pointer h-8 flex items-center z-10"
                 >
