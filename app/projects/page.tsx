@@ -17,6 +17,14 @@ const racingSansOne = Racing_Sans_One({
 // Dummy data for projects
 const projects: Project[] = [
   {
+    title: "KiteLab",
+    description: "a team specializing in cutting-edge websites with 3D and modern technologies",
+    technologies: ["Next.js", "Tailwind", "Motion Div", "Adobe Photoshop", "JWT", "Express.js", "TypeScript", "JavaScript", "MySQL"],
+    image: "/ktelab2.jpg",
+    githubLink: "https://github.com/HamzaBnJemaa/kitelab.git",
+    liveLink: "https://kitelab.vercel.app/" 
+  },
+  {
     title: "Portfolio Website",
     description: "A personal portfolio website built to showcase my projects and skills.",
     technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Shadcn/ui"],
@@ -48,16 +56,14 @@ const projects: Project[] = [
     technologies: ["NEXT.JS", "Tailwind", "TypeScript", "Cloudinary"],
     image: "/hannibal.jpg", 
     githubLink: "https://github.com/HamzaBnJemaa/Hannibal-new-version.git",
-    liveLink: "#"
   },
 
   {
     title: "Codini Project",
-    description: "A project showcasing an image called codini.jpg.",
-    technologies: ["Next.js", "React"],
+    description: "A digital coding school with interactive lessons, quizzes, and mentorship from elite teachers.",
+    technologies: ["JavaScript", "TypeScript", "Next.js", "Tailwind", "React Native", "MongoDB", "JWT"],
     image: "/codini.jpg",
-    githubLink: "#",
-    liveLink: "#"
+    githubLink: "https://github.com/Codini-Porject/Codini.git",
   }
 ];
 
