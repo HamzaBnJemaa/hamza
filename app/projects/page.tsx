@@ -20,7 +20,7 @@ const projects: Project[] = [
     title: "KiteLab",
     description: "a team specializing in cutting-edge websites with 3D and modern technologies",
     technologies: ["Next.js", "Tailwind", "Motion Div", "Adobe Photoshop", "JWT", "Express.js", "TypeScript", "JavaScript", "MySQL"],
-    image: "/ktelab2.jpg",
+    image: "/kito.jpeg",
     githubLink: "https://github.com/HamzaBnJemaa/kitelab.git",
     liveLink: "https://kitelab.vercel.app/" 
   },
