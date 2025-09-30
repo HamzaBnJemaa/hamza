@@ -18,7 +18,7 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className="bg-white/5 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1 flex flex-col h-full">
+    <div className="bg-white/5 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1 flex flex-col h-full cursor-pointer">
       <Image 
         src={project.image}
         alt={project.title}
@@ -37,7 +37,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         ))}
       </div>
       
-      <div className="mt-auto flex gap-4">
+      <div className="mt-auto flex gap-4 justify-center">
         <a 
           href={project.githubLink}
           target="_blank"
