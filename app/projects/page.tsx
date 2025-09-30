@@ -20,7 +20,7 @@ const projects: Project[] = [
     title: "KiteLab",
     description: "a team specializing in cutting-edge websites with 3D and modern technologies",
     technologies: ["Next.js", "Tailwind", "Motion Div", "Adobe Photoshop", "JWT", "Express.js", "TypeScript", "JavaScript", "MySQL"],
-    image: "/kito.jpeg",
+    image: "/kiteee.jpg",
     githubLink: "https://github.com/HamzaBnJemaa/kitelab.git",
     liveLink: "https://kitelab.vercel.app/" 
   },
@@ -64,6 +64,24 @@ const projects: Project[] = [
     technologies: ["JavaScript", "TypeScript", "Next.js", "Tailwind", "React Native", "MongoDB", "JWT"],
     image: "/codini.jpg",
     githubLink: "https://github.com/Codini-Porject/Codini.git",
+  },
+
+  {
+    title: "KiteDesk",
+    description: "Developing an office management platform enabling team collaboration and account interactions across multiple offices. Building the frontend architecture with Next.js, TypeScript, Tailwind CSS, and Framer Motion for responsive UI. Implementing database schemas with MySQL and establishing foundational backend logic for future feature expansion.",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "MySQL"],
+    image: "/kitedesk.jpg",
+    githubLink: "#", // Placeholder
+    liveLink: "Still on Work" 
+  },
+
+  {
+    title: "KiteLance",
+    description: "A comprehensive web dashboard designed for freelancers, offering a centralized platform to manage projects, clients, invoices, and communication. It provides tools for task tracking, time management, and financial oversight, enabling freelancers to streamline their workflow and enhance productivity. Built with modern web technologies to ensure a responsive and intuitive user experience.",
+    technologies: ["Next.js", "Tailwind", "Motion Div", "Adobe Photoshop", "JWT", "Express.js", "TypeScript", "JavaScript", "MySQL", "Framer Motion"],
+    image: "/kitelance.jpg", // Placeholder image
+    githubLink: "#", // Placeholder
+    liveLink: "Soon"
   }
 ];
 
