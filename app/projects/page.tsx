@@ -14,6 +14,7 @@ const racingSansOne = Racing_Sans_One({
   variable: '--font-racing-sans',
 })
 
+
 // Dummy data for projects
 const projects: Project[] = [
   {
