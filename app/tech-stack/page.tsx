@@ -29,6 +29,7 @@ export default function TechStackPage() {
                   // Removed: fontFamily: '"Racing Sans One" !important',
                 }}
               >
+                
                 My Tech Stack
               </h1>
               <div className="w-20 h-0.5 bg-gradient-to-r from-white to-transparent mx-auto"></div>
