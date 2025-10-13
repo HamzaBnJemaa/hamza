@@ -11,7 +11,7 @@ export default function Header() {
       {/* Logo - Hidden on mobile */}
       <Link href="/" className="hidden md:flex items-center">
         <img 
-          src="/h-2.png" 
+          src="/hamzawhite.png" 
           alt="Logo"
           className="h-10 w-auto hover:opacity-80 transition-opacity"
         />
@@ -49,7 +49,7 @@ export default function Header() {
             </svg>
           ) : (
             <img 
-              src="/h-2.png" 
+              src="/hamzawhite.png" 
               alt="Menu"
               className="h-8 w-8 object-contain"
               onError={(e) => {
@@ -123,7 +123,7 @@ export default function Header() {
           <div className="flex items-center justify-between p-4">
             <Link href="/" className="flex items-center" onClick={() => setIsMenuOpen(false)}>
               <img 
-                src="/h-2.png" 
+                src="/hamzawhite.png" 
                 alt="Logo" 
                 className="h-8 w-8 object-contain"
                 onError={(e) => {
