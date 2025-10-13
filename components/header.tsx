@@ -51,7 +51,7 @@ export default function Header() {
             <img 
               src="/hamzawhite.png" 
               alt="Menu"
-              className="h-8 w-8 object-contain"
+              className="h-12 w-12 object-contain"
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
                 target.onerror = null;
@@ -125,7 +125,7 @@ export default function Header() {
               <img 
                 src="/hamzawhite.png" 
                 alt="Logo" 
-                className="h-8 w-8 object-contain"
+                className="h-12 w-12 object-contain"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
                   target.onerror = null;
