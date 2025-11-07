@@ -13,7 +13,7 @@ import {
   BiLogoHtml5,
   BiLogoCss3
 } from 'react-icons/bi';
-import { SiNextdotjs, SiLaravel, SiAstro, SiGithub, SiLinkedin, SiX, SiInstagram } from 'react-icons/si';
+import { SiNextdotjs, SiLaravel, SiAstro, SiGithub, SiLinkedin, SiX, SiInstagram, SiBootstrap } from 'react-icons/si';
 import { DiMysql } from 'react-icons/di';
 import { FaXTwitter } from 'react-icons/fa6';
 import { BiCodeAlt } from 'react-icons/bi'; // Import BiCodeAlt for Liquid
@@ -42,6 +42,7 @@ const technologies = [
   { name: "MongoDB", icon: <BiLogoMongodb className="w-8 h-8 mx-auto" /> },
   { name: "MySQL", icon: <DiMysql className="w-8 h-8 mx-auto" /> },
   { name: "Git", icon: <BiLogoGit className="w-8 h-8 mx-auto" /> },
+  { name: "Bootstrap", icon: <SiBootstrap className="w-8 h-8 mx-auto" /> },
 ]
 
 const socialLinks = [
