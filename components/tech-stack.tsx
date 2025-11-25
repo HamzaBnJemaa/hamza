@@ -13,7 +13,7 @@ import {
   BiLogoHtml5,
   BiLogoCss3
 } from 'react-icons/bi';
-import { SiNextdotjs, SiLaravel, SiAstro, SiGithub, SiLinkedin, SiX, SiInstagram, SiBootstrap } from 'react-icons/si';
+import { SiNextdotjs, SiLaravel, SiAstro, SiGithub, SiLinkedin, SiX, SiInstagram, SiBootstrap, SiAngular, SiFlutter } from 'react-icons/si';
 import { DiMysql } from 'react-icons/di';
 import { FaXTwitter } from 'react-icons/fa6';
 import { BiCodeAlt } from 'react-icons/bi'; // Import BiCodeAlt for Liquid
@@ -28,6 +28,8 @@ const racingSansOne = Racing_Sans_One({
 
 const technologies = [
   { name: "React", icon: <BiLogoReact className="w-8 h-8 mx-auto" /> },
+  { name: "Angular", icon: <SiAngular className="w-8 h-8 mx-auto" /> },
+  { name: "Flutter", icon: <SiFlutter className="w-8 h-8 mx-auto" /> },
   { name: "Next.js", icon: <SiNextdotjs className="w-8 h-8 mx-auto" /> },
   { name: "TypeScript", icon: <BiLogoTypescript className="w-8 h-8 mx-auto" /> },
   { name: "Tailwind CSS", icon: <BiLogoTailwindCss className="w-8 h-8 mx-auto" /> },
